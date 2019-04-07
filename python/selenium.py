@@ -1,0 +1,11 @@
+username = driver.find_element_by_id('username')
+username.send_keys('username')
+password = driver.find_element_by_id('password')
+password.send_keys('password')
+login = driver.find_element_by_id('login')
+login.click()
+header = driver.find_element_by_id('header')
+assert 'logged in' in header.get_attribute('text')
+next = driver.find_element_by_id('next')
+next.click()
+

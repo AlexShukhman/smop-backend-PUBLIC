@@ -1,0 +1,23 @@
+Button[myButton] <onclick> finally TextArea[myText] ‘smop’;
+
+Generated file:
+    Boilerplate:
+
+        from pyvirtualdisplay import Display
+        from selenium import webdriver
+        from selenium.webdriver.common.keys import Keys
+
+        display = Display(visible=0, size=(800, 600))
+        display.start()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--no-sandbox')
+        driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chrome_options)
+        driver.get('http://localhost:8000')
+        
+
+    Parser:
+        myButton = driver.find_element_by_id('myButton')
+        myButton.sendKeys(Keys.RETURN)
+        myText = driver.find_element_by_id('myText')
+        if myText.getAttribute('value') != 'smop': return False
+

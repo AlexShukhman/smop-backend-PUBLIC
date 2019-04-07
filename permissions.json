@@ -1,0 +1,15 @@
+{
+   "Statement": [
+      {
+         "Effect": "Allow",
+         "Principal": {"AWS":"*"},
+         "Action": "s3:GetObject",
+         "Resource": "arn:aws:s3:::parth-test-0/*",
+         "Condition": {
+            "NotIpAddress": {
+               "aws:SourceIp": ""
+            }  
+         }	 
+      }
+   ]
+}

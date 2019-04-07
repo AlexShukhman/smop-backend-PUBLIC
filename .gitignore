@@ -1,0 +1,14 @@
+# temp files
+./python/jsmiddleware.js
+# logs
+*.log 
+.git 
+outputlog.txt
+errorlog.txt
+node_modules/*
+coder.txt
+owner.txt
+jssetup.sh
+tests.parth
+test2.parth
+seleniumTest.py
